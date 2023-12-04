@@ -1,0 +1,55 @@
+infrastructure/terraform.tfvars
+infrastructure/.terraform
+infrastructure/terraform.tfstate.backup
+infrastructure/.terraform.lock.hcl
+infrastructure/terraform.tfstate
+infrastructure/oci/.terraform
+infrastructure/oci/terraform.tfstate.backup
+infrastructure/oci/terraform.tfstate
+infrastructure/oci/.terraform.lock.hcl
+infrastructure/docker/.terraform
+infrastructure/docker/terraform.tfstate.backup
+infrastructure/docker/terraform.tfstate
+infrastructure/docker/.terraform.lock.hcl
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+
+# Build
+api/public/css/main.css
+
+# Coverage reports
+api/coverage
+
+# API keys and secrets
+api/.env
+
+# Dependency directory
+api/node_modules
+api/bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+api/dist/**/*
+
+# ignore yarn.lock
+yarn.lock
