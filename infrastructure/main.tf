@@ -21,5 +21,5 @@ module "oci" {
 module "docker" {
 	source = "./docker"
 	compute_instance_ip = "${module.oci.public_ip[0]}"
-    db_connection_string = "${module.oci.database_connection_strings[0].profiles[2].value}"
+    db_connection_string = "${module.oci.database_connection_string}"
 }

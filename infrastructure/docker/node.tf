@@ -1,14 +1,14 @@
 # Start elastic container
 resource "docker_container" "node" {
-    image = "${docker_image.node}"
+    image = "crud-api"
     name = "node"
     hostname = "node"
-    env = ["ORACLEDB_CONNECTION_STRING=${var.db_connection_string}", "SITEURL=${var.compute_instance_ip}:3000"]
+    env = ["ORACLEDB_CONNECTION_STRING=${var.db_connection_string}", "SITEURL=${var.compute_instance_ip}:80"]
     restart= "no"
     must_run="true"
-}
-
-# Pull images
-resource "docker_image" "node" {
-    name = "node:20.8.1-alpine"
+    ports {
+        internal = 3000
+        external = 80
+        ip       = "0.0.0.0"
+    }
 }

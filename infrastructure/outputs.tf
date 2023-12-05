@@ -15,5 +15,5 @@ output "db_state" {
 
 output "connection_string" {
     description = "The connection string for the DB"
-    value       = module.oci.database_connection_strings[0].profiles[2].value
+    value       = module.oci.database_connection_string
 }
