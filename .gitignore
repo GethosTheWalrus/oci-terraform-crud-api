@@ -16,6 +16,8 @@ infrastructure/docker/terraform.tfstate.backup
 infrastructure/docker/terraform.tfstate
 infrastructure/docker/.terraform.lock.hcl
 
+Archives/*
+
 lib-cov
 *.seed
 *.log
